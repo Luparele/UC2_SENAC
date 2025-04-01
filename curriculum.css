@@ -15,13 +15,36 @@ body{
 
 }
 
-h1, h2{
+.foto-esquerda {
+    float: left; /* Faz a imagem ficar no lado direito */
+    margin: 0px; /* Adiciona um espaço ao redor da imagem */
+    border-radius: 30%; /* Deixa a imagem arredondada (opcional) */
+    border: 0px solid #000; /* Adiciona uma borda preta */
+    width: 130px; /* Ajusta o tamanho da imagem */
+    height: 130px; /* Garante que a imagem será quadrada */
+    object-fit: cover; /* Faz a imagem se ajustar ao contêiner mantendo a proporção */
+    margin-left: 50px; /* Adiciona um espaço entre a imagem e o texto */
+  }
+  @media (max-width: 568px) { /* Define o estilo para telas menores*/
+    .foto-esquerda {
+      float: none; /* Remove o alinhamento à direita em telas pequenas */
+      display: block;
+      margin: 0 auto; /* Centraliza a imagem */
+    }
+  }
+
+h1{
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2{
     color: #2c3e50;
     margin-bottom: 10px;
 }
 
 .header{
-margin-bottom: 30px;
+margin-bottom: 20px;
 text-align: center;
 border-bottom: 2px solid #2c3e50;
 }
@@ -33,6 +56,7 @@ border-bottom: 2px solid #2c3e50;
  .section p {
 
     margin: 5px 0;
+    margin-left: 20px;
 }
 
 a{
@@ -42,4 +66,5 @@ a{
 
 ul{
     padding-left: 20px;
+    margin-left: 20px;
 }
