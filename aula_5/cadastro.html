@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
 </head>
-<body class="bg-light">
+<body style="background: rgb(255, 255, 255) url('bg.png') center center; background-size: 500px;">
+    <!--<body class="bg-light" >-->
     <nav class="navbar navbar-expanded-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Loja</a>
@@ -22,10 +23,10 @@
             <div class="collapse navbar-collapse" id="navbarnav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Produto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="produtos.html">Produto</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Login</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cadastro.html">Cadastro</a></li>
                 </ul>
             </div>
 
@@ -58,6 +59,91 @@
                         <input type="text" class="form-control" id="role" name="role" placeholder="Digite sua função" required>
                     </div>
 
+                    <div class="mb-3">
+                        <label for="genero" class="form-label">Genero</label><br>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="genero" id="masc" value="Masculino">
+                            <label for="masc" form-check-label>Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="genero" id="fem" value="Feminino">
+                            <label for="fem" form-check-label>Feminino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="genero" id="outro" value="Outros">
+                            <label for="outro" form-check-label>Outro</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">
+                            Estado:
+                            <select name="estado" id="estado">
+                                <option selected disabled>Selecione seu estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </label>
+                    </div>
+                    
+                    <div class="mb-3">
+
+                        <label class="form-label">Preferências:</label><br>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="preferencias[]" id="ofertas" value="ofertas">
+                            <label class="form-check-label" for="ofertas">Receber ofertas por email</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="preferencias[]" id="novidades" value="novidades">
+                            <label class="form-check-label" for="novidades">Receber novidades da loja</label>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cor" class="form-label">Cor favorita:</label>
+                        <input type="color" class="form-control form-control-color" id="cor">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="foto" class="form-label">Foto de perfil:</label>
+                        <input type="file" id="foto" class="form-control" name="foto">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Deixei sua mensagem:</label>
+                        <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Deixe sua mensagem" required></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">Sobre você:</label>
+                        <textarea name="descricao" id="descricao" placeholder="Digite uma breve descrição sobre vocé" class="form-control" rows="3"></textarea>
+                    </div>
+
                     <div class="d-flex justify-content-between">
                         <button type="reset" class="btn btn-secondary">Limpar</button>
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
@@ -65,9 +151,7 @@
                 </form>
             </div>
         </div>
-        <footer class="bg-dark text-white text-center py-4 mt-5">
-            <p class="mb-0">&copy; 2025 Loja. Todos os direitos reservados.</p>
-        </footer>
+        
         <script>
             async function enviarCadastro(event){
                 event.preventDefault(); // Impede o envio padrão do formulário
@@ -104,5 +188,8 @@
             document.querySelector('form').addEventListener('submit', enviarCadastro); // Adiciona o evento de submit ao formulário
         </script>
     </div>
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2025 Loja. Todos os direitos reservados.</p>
+    </footer>
     </body>
 </html>

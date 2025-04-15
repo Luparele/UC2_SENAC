@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
 </head>
-<body class="bg-light">
+<body style="background: rgb(255, 255, 255) url('bg.png') center center; background-size: 500px;">
+<!--<body class="bg-light" >-->
     <nav class="navbar navbar-expanded-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Loja</a>
@@ -22,10 +23,10 @@
             <div class="collapse navbar-collapse" id="navbarnav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Produto</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="produtos.html">Produto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Login</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cadastro.html">Cadastro</a></li>
                 </ul>
             </div>
 
@@ -52,7 +53,74 @@
                         <label for="mensagem" class="form-label">Deixei sua mensagem:</label>
                         <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Deixe sua mensagem" required></textarea>
                     </div>
-                    
+                    <br>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Selecione o estado, em que precisa de ajuda:</label><br>
+                            <select name="estado" id="estado">
+                                <option selected disabled>Selecione o estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                     </div>
+
+                    <div class="mb-3">
+                        <label for="localidade" class="form-label">Localidade:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="localidade" id="capital" value="Capital">
+                            <label for="capital" form-check-label>Capital</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="localidade" id="interior" value="Interior">
+                            <label for="interior" form-check-label>Interior</label>
+                        </div>
+                    </div><br>
+
+                    <div class="mb-3">
+                        <label for="cupom" class="form-label">Envie seu cupom fiscal, caso seja problemas com produtos:</label>
+                        <input type="file" id="cupom" class="form-control" name="cupom">
+                    </div>
+
+                    <br>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">Preferências de contato:</label><br>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="preferencias[]" id="telefone" value="telefone">
+                            <label class="form-check-label" for="telefone">Receber resposta por telefone</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="preferencias[]" id="email" value="email">
+                            <label class="form-check-label" for="email">Receber resposta por e-mail</label>
+                        </div>
+
+                    </div>
+
                     <div class="mb-3 text-center">
                         <P>Sua mensagem ser&aacute; respondido o mais breve poss&iacute;vel.<br></P>
                     </div>
@@ -69,9 +137,10 @@
                 </form>
             </div>
         </div>
-        <footer class="bg-dark text-white text-center py-4 mt-5">
+        
+    </div>
+    <footer class="bg-dark text-white text-center py-4 mt-5 w-100">
             <p class="mb-0">&copy; 2025 Loja. Todos os direitos reservados.</p>
         </footer>
-    </div>
     </body>
 </html>
