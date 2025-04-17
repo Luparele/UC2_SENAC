@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Departamentos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Loja de Departamentos</a>
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cadastro.html">cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="login.html">login</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <a class="btn btn-outline-success" href="login.html" role="button">Login</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-5"><!-- container-fluid = ocupar toda a tela | py-5 = padding-top e padding-bottom -->
+        <div class="mb-4"><!-- mb-4 = margin-bottom | text-center = centralizar o texto -->
+            <div class="container bg-white w-75 p-5 rounded shadow">
+                <h2 class="mb-4 text-center">Entre em Contato</h2>
+                <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                    
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Nome completo:</label>
+                        <input type="text" class="form-control" id="username" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Deixei sua mensagem:</label>
+                        <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Deixe sua mensagem" required></textarea>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Selecione o estado, em que precisa de ajuda:</label><br>
+                            <select name="estado" id="estado">
+                                <option selected disabled>Selecione o estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                     </div>
+
+                    <div class="mb-3">
+                        <label for="localidade" class="form-label">Localidade:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="localidade" id="capital" value="Capital">
+                            <label for="capital" form-check-label>Capital</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="localidade" id="interior" value="Interior">
+                            <label for="interior" form-check-label>Interior</label>
+                        </div>
+                    </div><br>
+
+                    <div class="mb-3">
+                        <label for="cupom" class="form-label">Envie seu cupom fiscal, caso seja problemas com produtos:</label>
+                        <input type="file" id="cupom" class="form-control" name="cupom">
+                    </div>
+
+                    <br>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">Preferências de contato:</label><br>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="preferencias[]" id="telefone" value="telefone">
+                            <label class="form-check-label" for="telefone">Receber resposta por telefone</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="preferencias[]" id="email" value="email">
+                            <label class="form-check-label" for="email">Receber resposta por e-mail</label>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3 text-center">
+                        <P>Sua mensagem ser&aacute; respondido o mais breve poss&iacute;vel.<br></P>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="reset" class="btn btn-secondary">Limpar</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                    <div class="mb-3 text-center"><br>
+                        <P>R.desconhecida 1234, Bairro desconhecido<br>
+                        Cidade desconhecida - ZZ<br>
+                        Telefone: (00) 0000-0000</P>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+      <div class="container">
+        <footer class="py-1 my-1" aria-label="Main navigation">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="cadastro.html" class="nav-link px-2 text-body-secondary">Cadastro</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link px-2 text-body-secondary">Contato</a></li>
+            <li class="nav-item"><a href="Produtos.html" class="nav-link px-2 text-body-secondary">produtos</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link px-2 text-body-secondary">Sobre</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link px-2 text-body-secondary">Login</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2025 Company, Inc</p>
+        </footer>
+      </div>
+
+</body>
+</html>
